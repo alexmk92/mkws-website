@@ -11,11 +11,11 @@ class Role extends Model
     {
         return $this->belongsToMany(Permission::class);
     }
-    
+
     public function grantPermission(Permission $permission)
     {
         return $this->permissions()->save($permission);
-    }
+    } 
 
     public function revokePermission(Permission $permission)
     {
